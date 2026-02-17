@@ -1,0 +1,3 @@
+[submodule "libs/modules"]
+	path = libs/modules
+	url = ../modules
