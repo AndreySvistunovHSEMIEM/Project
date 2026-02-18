@@ -2,27 +2,19 @@
 
 ## Установка
 
-Клонировать репозиторий вместе с submodules:
+Клонировать репозиторий:
 
 ```bash
-git clone --recurse-submodules git@github.com:AndreySvistunovHSEMIEM/Project.git
+git clone git@github.com:AndreySvistunovHSEMIEM/Project.git
 cd Project
 ```
 
-Если репозиторий уже клонирован без `--recurse-submodules`:
-
-```bash
-git submodule init
-git submodule update
-```
+Модули уже включены в репозиторий через git subtree — ничего дополнительного делать не нужно.
 
 ## Обновление modules
 
-Подтянуть последнюю версию submodule:
+Подтянуть последнюю версию модулей:
 
 ```bash
-git submodule update --remote libs/modules
-git add libs/modules
-git commit -m "chore: update modules submodule"
-git push
+git subtree pull --prefix=libs/modules git@github.com:AndreySvistunovHSEMIEM/module.git main --squash
 ```
